@@ -372,5 +372,5 @@ let getScore = function scoreBoard (roundResult) {
     else if (roundResult === "player loses") {
         computerScore++;
     }
-    return ('Rounds Played: ' + round + ' | ' + 'Player Score: ' + playerScore + " | \n" + "Computer Score: " + computerScore);
+    return ('Rounds Played: ' + round + '. ' + 'Player Score: ' + playerScore + ". " + "Computer Score: " + computerScore + ".");
 }
