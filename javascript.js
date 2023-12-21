@@ -44,7 +44,7 @@ clickRock.addEventListener('click', function choseRock() {
     continueButtonContainer.appendChild(roundWinnerAnnouncement);
     continueButtonContainer.appendChild(continueButton);
     hidePlayerChoices.setAttribute('style', 'display: none');
-    if (playerScore === 3 || computerScore === 3) {
+    if (playerScore === 3) {
         roundResultContainer.textContent = roundScore;
         scoreBoardContainer.setAttribute('style', 'display: none');
         continueButtonContainer.setAttribute('style', 'display: none');
@@ -112,7 +112,7 @@ clickPaper.addEventListener('click', function chosePaper() {
     continueButtonContainer.appendChild(roundWinnerAnnouncement);
     continueButtonContainer.appendChild(continueButton);
     hidePlayerChoices.setAttribute('style', 'display: none');
-    if (playerScore === 3 || computerScore === 3) {
+    if (playerScore === 3) {
         roundResultContainer.textContent = roundScore;
         scoreBoardContainer.setAttribute('style', 'display: none');
         continueButtonContainer.setAttribute('style', 'display: none');
@@ -180,7 +180,7 @@ clickScissors.addEventListener('click', function choseScissors() {
     continueButtonContainer.appendChild(roundWinnerAnnouncement);
     continueButtonContainer.appendChild(continueButton);
     hidePlayerChoices.setAttribute('style', 'display: none');
-    if (playerScore === 3 || computerScore === 3) {
+    if (playerScore === 3) {
         roundResultContainer.textContent = roundScore;
         scoreBoardContainer.setAttribute('style', 'display: none');
         continueButtonContainer.setAttribute('style', 'display: none');
