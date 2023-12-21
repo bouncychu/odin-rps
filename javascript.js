@@ -46,7 +46,7 @@ clickRock.addEventListener('click', function choseRock() {
     hidePlayerChoices.setAttribute('style', 'display: none');
     if (playerScore === 3) {
         roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: none');
+        scoreBoardContainer.setAttribute('style', 'display: flex');
         continueButtonContainer.setAttribute('style', 'display: none');
         roundResultContainer.setAttribute('style', 'display: flex');
         gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -54,7 +54,7 @@ clickRock.addEventListener('click', function choseRock() {
         }
     else if ( computerScore === 3) {
         roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: none');
+        scoreBoardContainer.setAttribute('style', 'display: flex');
         continueButtonContainer.setAttribute('style', 'display: none');
         roundResultContainer.setAttribute('style', 'display: flex');
         gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -63,7 +63,7 @@ clickRock.addEventListener('click', function choseRock() {
     else if (round === 5) {
         if (playerScore > computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -71,7 +71,7 @@ clickRock.addEventListener('click', function choseRock() {
         }
         else if (playerScore < computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -79,7 +79,7 @@ clickRock.addEventListener('click', function choseRock() {
         }
         else if (playerScore === computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -114,7 +114,7 @@ clickPaper.addEventListener('click', function chosePaper() {
     hidePlayerChoices.setAttribute('style', 'display: none');
     if (playerScore === 3) {
         roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: none');
+        scoreBoardContainer.setAttribute('style', 'display: flex');
         continueButtonContainer.setAttribute('style', 'display: none');
         roundResultContainer.setAttribute('style', 'display: flex');
         gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -122,7 +122,7 @@ clickPaper.addEventListener('click', function chosePaper() {
         }
     else if ( computerScore === 3) {
         roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: none');
+        scoreBoardContainer.setAttribute('style', 'display: flex');
         continueButtonContainer.setAttribute('style', 'display: none');
         roundResultContainer.setAttribute('style', 'display: flex');
         gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -131,7 +131,7 @@ clickPaper.addEventListener('click', function chosePaper() {
     else if (round === 5) {
         if (playerScore > computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -139,7 +139,7 @@ clickPaper.addEventListener('click', function chosePaper() {
         }
         else if (playerScore < computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -147,7 +147,7 @@ clickPaper.addEventListener('click', function chosePaper() {
         }
         else if (playerScore === computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -182,7 +182,7 @@ clickScissors.addEventListener('click', function choseScissors() {
     hidePlayerChoices.setAttribute('style', 'display: none');
     if (playerScore === 3) {
         roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: none');
+        scoreBoardContainer.setAttribute('style', 'display: flex');
         continueButtonContainer.setAttribute('style', 'display: none');
         roundResultContainer.setAttribute('style', 'display: flex');
         gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -190,7 +190,7 @@ clickScissors.addEventListener('click', function choseScissors() {
         }
     else if ( computerScore === 3) {
         roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: none');
+        scoreBoardContainer.setAttribute('style', 'display: flex');
         continueButtonContainer.setAttribute('style', 'display: none');
         roundResultContainer.setAttribute('style', 'display: flex');
         gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -199,7 +199,7 @@ clickScissors.addEventListener('click', function choseScissors() {
     else if (round === 5) {
         if (playerScore > computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -207,7 +207,7 @@ clickScissors.addEventListener('click', function choseScissors() {
         }
         else if (playerScore < computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
@@ -215,7 +215,7 @@ clickScissors.addEventListener('click', function choseScissors() {
         }
         else if (playerScore === computerScore) {
             roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: none');
+            scoreBoardContainer.setAttribute('style', 'display: flex');
             continueButtonContainer.setAttribute('style', 'display: none');
             roundResultContainer.setAttribute('style', 'display: flex');
             gameEndMenuContainer.setAttribute('style', 'display: flex');
