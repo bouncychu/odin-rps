@@ -1,2 +1,2 @@
-# odin-rps
-Rock Paper Scissors Game project with UI
+# top-rock-paper-scissors
+Foundation lesson for rock paper scissors game project for the Odin Project course
