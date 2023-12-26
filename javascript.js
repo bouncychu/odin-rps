@@ -29,9 +29,8 @@ const roundWinnerAnnouncement = document.createElement('h2');
 const gameEndMenuContainer = document.querySelector('#game-end-menu');
 const gameEndMenuMessage = document.querySelector('#game-end-message');
 
-const clickRock = document.querySelector("#btn-rock");
-clickRock.addEventListener('click', function choseRock() {
-    humanChoice = 'rock';
+// Function for best of 5 game to be played
+let playGame = function game() {
     roundResultContainer.setAttribute('style', 'display: none');
     roundResultContainer.textContent = roundScore;
     console.log('human choice is ' + humanChoice);
@@ -95,149 +94,31 @@ clickRock.addEventListener('click', function choseRock() {
         roundResultContainer.textContent = roundScore;
         roundResultContainer.setAttribute("style", "display: flex");
     })
+}
+
+const clickRock = document.querySelector("#btn-rock");
+clickRock.addEventListener('click', function choseRock() {
+    humanChoice = 'rock';
+    playGame();
 })
 
 let clickPaper = document.querySelector("#btn-paper");
 clickPaper.addEventListener('click', function chosePaper() {
     humanChoice = 'paper';
-    roundResultContainer.setAttribute('style', 'display: none');
-    roundResultContainer.textContent = roundScore;
-    console.log('human choice is ' + humanChoice);
-    let roundResult = singleRound(humanChoice, computerSelection());
-    console.log(roundResult);
-    roundScore = getScore(roundResult);
-    console.log (roundScore);
-    scoreBoardContainer.after(continueButtonContainer)
-    roundWinnerAnnouncement.textContent = roundResult.toUpperCase(roundResult) + "!";
-    continueButtonContainer.appendChild(roundWinnerAnnouncement);
-    continueButtonContainer.appendChild(continueButton);
-    hidePlayerChoices.setAttribute('style', 'display: none');
-    if (playerScore === 3) {
-        roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: flex');
-        continueButtonContainer.setAttribute('style', 'display: none');
-        roundResultContainer.setAttribute('style', 'display: flex');
-        gameEndMenuContainer.setAttribute('style', 'display: flex');
-        gameEndMenuMessage.textContent = "Congratulations! Player wins best of 5! Computer Cat loses :(";
-        }
-    else if ( computerScore === 3) {
-        roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: flex');
-        continueButtonContainer.setAttribute('style', 'display: none');
-        roundResultContainer.setAttribute('style', 'display: flex');
-        gameEndMenuContainer.setAttribute('style', 'display: flex');
-        gameEndMenuMessage.textContent = "Sorry! Computer Cat Wins best of 5! : ) Player loses.";
-    }
-    else if (round === 5) {
-        if (playerScore > computerScore) {
-            roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: flex');
-            continueButtonContainer.setAttribute('style', 'display: none');
-            roundResultContainer.setAttribute('style', 'display: flex');
-            gameEndMenuContainer.setAttribute('style', 'display: flex');
-            gameEndMenuMessage.textContent = "Congratulations! Player wins best of 5! Computer Cat loses :(";
-        }
-        else if (playerScore < computerScore) {
-            roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: flex');
-            continueButtonContainer.setAttribute('style', 'display: none');
-            roundResultContainer.setAttribute('style', 'display: flex');
-            gameEndMenuContainer.setAttribute('style', 'display: flex');
-            gameEndMenuMessage.textContent = "Sorry! Computer Cat Wins best of 5! : ) Player loses.";    
-        }
-        else if (playerScore === computerScore) {
-            roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: flex');
-            continueButtonContainer.setAttribute('style', 'display: none');
-            roundResultContainer.setAttribute('style', 'display: flex');
-            gameEndMenuContainer.setAttribute('style', 'display: flex');
-            gameEndMenuMessage.textContent = "It's a tie. Click the button below to challenge Computer Cat again!";
-        }
-    }
-    const buttonClicked = document.querySelector('#continue-button');
-    buttonClicked.addEventListener('click', function newRound() {
-        continueButtonContainer.remove();
-        scoreBoardContainer.remove();
-        hidePlayerChoices.setAttribute('style', 'display: flex');
-        roundAnnouncement = roundScore.toString(); 
-        roundResultContainer.textContent = roundScore;
-        roundResultContainer.setAttribute("style", "display: flex");
-    })
+    playGame();
 })
 
 let clickScissors = document.querySelector("#btn-scissors");
 clickScissors.addEventListener('click', function choseScissors() {
     humanChoice = 'scissors';
-    roundResultContainer.setAttribute('style', 'display: none');
-    roundResultContainer.textContent = roundScore;
-    console.log('human choice is ' + humanChoice);
-    let roundResult = singleRound(humanChoice, computerSelection());
-    console.log(roundResult);
-    roundScore = getScore(roundResult);
-    console.log (roundScore);
-    scoreBoardContainer.after(continueButtonContainer)
-    roundWinnerAnnouncement.textContent = roundResult.toUpperCase(roundResult) + "!";
-    continueButtonContainer.appendChild(roundWinnerAnnouncement);
-    continueButtonContainer.appendChild(continueButton);
-    hidePlayerChoices.setAttribute('style', 'display: none');
-    if (playerScore === 3) {
-        roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: flex');
-        continueButtonContainer.setAttribute('style', 'display: none');
-        roundResultContainer.setAttribute('style', 'display: flex');
-        gameEndMenuContainer.setAttribute('style', 'display: flex');
-        gameEndMenuMessage.textContent = "Congratulations! Player wins best of 5! Computer Cat loses :(";
-        }
-    else if ( computerScore === 3) {
-        roundResultContainer.textContent = roundScore;
-        scoreBoardContainer.setAttribute('style', 'display: flex');
-        continueButtonContainer.setAttribute('style', 'display: none');
-        roundResultContainer.setAttribute('style', 'display: flex');
-        gameEndMenuContainer.setAttribute('style', 'display: flex');
-        gameEndMenuMessage.textContent = "Sorry! Computer Cat Wins best of 5! : ) Player loses.";
-    }
-    else if (round === 5) {
-        if (playerScore > computerScore) {
-            roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: flex');
-            continueButtonContainer.setAttribute('style', 'display: none');
-            roundResultContainer.setAttribute('style', 'display: flex');
-            gameEndMenuContainer.setAttribute('style', 'display: flex');
-            gameEndMenuMessage.textContent = "Congratulations! Player wins best of 5! Computer Cat loses :(";
-        }
-        else if (playerScore < computerScore) {
-            roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: flex');
-            continueButtonContainer.setAttribute('style', 'display: none');
-            roundResultContainer.setAttribute('style', 'display: flex');
-            gameEndMenuContainer.setAttribute('style', 'display: flex');
-            gameEndMenuMessage.textContent = "Sorry! Computer Cat Wins best of 5! : ) Player loses.";    
-        }
-        else if (playerScore === computerScore) {
-            roundResultContainer.textContent = roundScore;
-            scoreBoardContainer.setAttribute('style', 'display: flex');
-            continueButtonContainer.setAttribute('style', 'display: none');
-            roundResultContainer.setAttribute('style', 'display: flex');
-            gameEndMenuContainer.setAttribute('style', 'display: flex');
-            gameEndMenuMessage.textContent = "It's a tie. Click the button below to challenge Computer Cat again!";
-        }
-    }
-    const buttonClicked = document.querySelector('#continue-button');
-    buttonClicked.addEventListener('click', function newRound() {
-        continueButtonContainer.remove();
-        scoreBoardContainer.remove();
-        hidePlayerChoices.setAttribute('style', 'display: flex');
-        roundAnnouncement = roundScore.toString(); 
-        roundResultContainer.textContent = roundScore;
-        roundResultContainer.setAttribute("style", "display: flex");
-    })
+    playGame();
 })
 
 const roundResultContainer = document.createElement('div');
 roundResultContainer.setAttribute("id", "round-result-container");
 roundResultContainer.textContent = "to be REPLACED on click";
 
-//Create DIV container to display choices of both human and computer
+//initialisation of variables used
 
 let titleContainer = document.querySelector('.title'); 
 titleContainer.appendChild(roundResultContainer);
@@ -283,6 +164,8 @@ computerChoiceContainer.appendChild(computerImagePaper);
 computerChoiceContainer.appendChild(computerImageScissors);
 
 
+//Function to show the weapon that player chose and hide other images
+
 function getPlayerImage() {
     let playerImage = document.createElement('img');
     if (humanChoice === "rock") {
@@ -301,6 +184,8 @@ function getPlayerImage() {
         playerImagePaper.setAttribute("style", "display: none");
     }
 }
+
+//function to show what the computer chose and hide other images
 
 function getComputerImage(computerChoice) {
     let computerImage = document.createElement('img');
@@ -324,6 +209,7 @@ function getComputerImage(computerChoice) {
     }
 }
 
+// Function to play a single round of rock paper scissors and determine a winner by taking in human & computer choices
 
 let singleRound = function playRound (humanChoice, computerChoice) {
     console.log('computer choice is ' + computerChoice);
@@ -360,6 +246,8 @@ let singleRound = function playRound (humanChoice, computerChoice) {
         return "player loses";
     }
 }
+
+// Function to keep score by adding points based on result of singleRound Function
 
 let playerScore = 0;
 let computerScore = 0;
